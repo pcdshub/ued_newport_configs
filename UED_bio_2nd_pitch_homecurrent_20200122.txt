@@ -1,0 +1,67 @@
+; UED pollux rotation stage
+;CMA@CMA-12PP@XPS-DRV01
+; --- Global stage parameters
+; --- <Stage.GenericInformation>
+SmartStageName=
+Unit=deg
+ConfigurationComment=
+; --- Motor driver parameters
+; --- <Driver.DRV01AnalogStepperPosition>
+DriverName=XPS-DRV01
+DriverPWMFrequency=50; KHz
+DriverStepperWinding=Full
+; --- Driver command interface parameters
+; --- <MotorDriverInterface.AnalogStepperPosition>
+MotorDriverInterface=AnalogStepperPosition
+ScalingCurrent=3; Amp
+;DisplacementPerFullStep=0.00009765625; Unit
+;DisplacementPerFullStep=0.01953125; Unit
+DisplacementPerFullStep=0.020; Unit
+;PeakCurrentPerPhase=0.3; Amp
+PeakCurrentPerPhase=1.0; Amp
+;StandbyPeakCurrentPerPhase=0.15; Amp
+StandbyPeakCurrentPerPhase=0.10; Amp
+BaseVelocity=0; Unit/Sec
+; --- Position encoder interface parameters
+; --- <Encoder.NoEncoder>
+EncoderType=NoEncoder
+; --- Travels and servitudes type parameters
+; --- <Servitudes.StandardEORDriverPlug>
+ServitudesType=StandardEORDriverPlug
+MinimumTargetPosition=-55; Unit
+;MaximumTargetPosition=12.5; Unit
+MaximumTargetPosition=55; Unit
+HomePreset=0; Unit
+; --- Backlash parameters
+; --- <Backlash.Standard>
+Backlash=0; Unit
+CurrentVelocityCutOffFrequency=100; Hz
+CurrentAccelerationCutOffFrequency=100; Hz
+; --- Profile generator parameters
+; --- <Profiler.Sgamma>
+;MaximumVelocity=0.4; Unit/Sec
+MaximumVelocity=8; Unit/Sec
+;MaximumAcceleration=1.6; Unit/Sec2
+MaximumAcceleration=32; Unit/Sec2
+EmergencyDecelerationMultiplier=4
+MinimumJerkTime=0.005; Sec
+MaximumJerkTime=0.05; Sec
+TrackingCutOffFrequency=25; Hz
+; --- Home search process parameters
+; --- <HomeSearch.MinusEndOfRunHomeSearch>
+;HomeSearchSequenceType=MinusEndOfRunHomeSearch
+HomeSearchSequenceType=CurrentPositionAsHome
+HomeSearchMaximumVelocity=5; Unit/Sec
+HomeSearchMaximumAcceleration=20; Unit/Sec2
+HomeSearchTimeOut=126; Sec
+HomingSensorOffset=0; Unit
+; --- Position servo loop parameters
+; --- <Corrector.NoEncoderPosition>
+CorrectorType=NoEncoderPosition
+; --- PreFeedForward filter parameters (PP version)
+; --- <PreFeedForwardFilter.NoCompensation>
+; --- PostFeedForward filter parameters (PP version)
+; --- <PostFeedForwardFilter.NoCompensation>
+; --- Motion done parameters
+; --- <MotionDone.Theoretical>
+MotionDoneMode=Theoretical

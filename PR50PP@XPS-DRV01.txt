@@ -1,0 +1,56 @@
+; --- Global stage parameters
+; --- <Stage.GenericInformation>
+SmartStageName=PR50PP
+Unit=deg
+ConfigurationComment=
+; --- Motor driver parameters
+; --- <Driver.DRV01AnalogStepperPosition>
+DriverName=XPS-DRV01
+DriverPWMFrequency=50; KHz
+DriverStepperWinding=Full
+; --- Driver command interface parameters
+; --- <MotorDriverInterface.AnalogStepperPosition>
+MotorDriverInterface=AnalogStepperPosition
+DelayAfterMotorOnToSetClosedLoop=0.05; sec # Not used by standard XPS-Q firmware
+ScalingCurrent=3; Amp
+DisplacementPerFullStep=0.02006838; Unit
+PeakCurrentPerPhase=0.3; Amp
+StandbyPeakCurrentPerPhase=0.15; Amp
+BaseVelocity=0; Unit/Sec
+; --- Position encoder interface parameters
+; --- <Encoder.NoEncoder>
+EncoderType=NoEncoder
+; --- Travels and servitudes type parameters
+; --- <Servitudes.StandardEORDriverPlug>
+ServitudesType=StandardEORDriverPlug
+MinimumTargetPosition=-1000000; Unit
+MaximumTargetPosition=1000000; Unit
+HomePreset=0; Unit
+; --- Backlash parameters
+; --- <Backlash.Standard>
+Backlash=0; Unit
+CurrentVelocityCutOffFrequency=100; Hz
+CurrentAccelerationCutOffFrequency=100; Hz
+; --- Profile generator parameters
+; --- <Profiler.Sgamma>
+MaximumVelocity=20; Unit/Sec
+JogMaximumVelocity=20; Unit/Sec # Not used by standard XPS-Q firmware
+MaximumAcceleration=80; Unit/Sec²
+JogMaximumAcceleration=80; Unit/Sec² # Not used by standard XPS-Q firmware
+EmergencyDecelerationMultiplier=4
+MinimumJerkTime=0.005; Sec
+MaximumJerkTime=0.05; Sec
+TrackingCutOffFrequency=25; Hz
+; --- Home search process parameters
+; --- <HomeSearch.MechanicalZeroHomeSearch>
+HomeSearchSequenceType=MechanicalZeroHomeSearch
+HomeSearchMaximumVelocity=10; Unit/Sec
+HomeSearchMaximumAcceleration=40; Unit/Sec²
+HomeSearchTimeOut=74; Sec
+HomingSensorOffset=0; Unit
+; --- Position servo loop parameters
+; --- <Corrector.NoEncoderPosition>
+CorrectorType=NoEncoderPosition
+; --- Motion done parameters
+; --- <MotionDone.Theoretical>
+MotionDoneMode=Theoretical
